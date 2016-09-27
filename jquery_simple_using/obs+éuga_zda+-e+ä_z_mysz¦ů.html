@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+ <title>zdarzenia z myszą</title> 
+ <style>
+   #target{
+     width: 150px;
+     height: 150px;
+     border: 1px solid red;
+   }
+   #block{
+     width: 50px;
+     height: 50px;
+     margin: 0px;
+     background-color: black;
+   }
+ </style>
+</head>
+<body>
+<h2>przsuwaj wskaźnik myszy po prostokocie żeby generować zdarzenia</h2>
+<div id="target">
+  <p id="block"></p>
+</div>
+
+<h3>nacisniecie i zwolnienie przysisku myszy : mousedown i mouseup</h3>
+<p class="mousedown mouseup"></p>
+
+<h3>przesunięcie wskaźnika myszy : mousemove</h3>
+<p class="mousemove"></p>
+
+<h3>click i double-click</h3>
+<p class="click dbclick"></p>
+
+<h3>umieszczenie wspaźnika w obszarze i jego opuszczenie: mouseeneter i mouseleave</h3>
+<p class="mouseeneter mouseleave"></p>
+
+<h3>umieszczenie wspaźnika w obszarze i jego opuszczenie: mouseover i mouseout</h3>
+<p class="mouseover mouseout"></p>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $each(('click dbclick mousedown mouseup mousemove mouseover ' + 'mouseout mouseeneter mouseleave').split(' '),
+      function(i, name){
+        $('#target').bind(name, function(event){
+          $('.' + name).html('element docelowy =' + event.target + ' ' + 
+            'typ = ' + event.type + ' ' +
+            'pageX = ' + event.pageX + ' ' +
+            'pageY = ' + event.pageY + ' ' +
+            'przycisk = ' + event.which + ' ');
+            
+        });
+      });
+    });
+    
+  </script>
+</body>
+</html>

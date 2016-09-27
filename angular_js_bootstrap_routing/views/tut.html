@@ -1,0 +1,17 @@
+<h1><i class="icon-laptop"></i> Zmień moje imie i nazwisko</h1>
+<h5>{{tutorialObject.title}}</h5>
+
+<p>String: {{tutorialObject.firstname + " " + tutorialObject.lastname}}</p>
+
+<label>First Name</label>
+<input ng-model="tutorialObject.firstname | uppercase">
+</br>
+<label>Last Name</label>
+<input ng-model="tutorialObject.lastname | lowercase">
+
+
+<h1><i class="icon-child"></i>Potęguj do woli!</h1>
+<p><b>Potęguj: {{tutorialObject.bindOutput | currency}}</b></p>
+<button ng-click="timesTwo()">Potęguj mnie!</button>
+
+<hr />

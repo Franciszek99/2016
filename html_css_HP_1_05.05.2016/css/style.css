@@ -1,0 +1,110 @@
+body
+{
+	margin:0;
+	font-family:arial;
+}
+
+footer, header
+{
+	background-color: #425462;
+	color: #ffffff;
+	padding:10px;
+}
+
+header a 
+{
+	color:#ffffff; 
+	text-decoration:none;
+}
+
+header h1 
+{
+	display:none;
+}
+
+header a:hover, header a:focus 
+{
+	color:lightgreen;
+}
+
+nav
+{
+	float:right;
+}
+nav li
+{
+	padding: 0 10px;
+	display:inline;
+}
+
+footer
+{
+	text-align:center;
+}
+footer img
+{
+	margin-bottom:20px;
+}
+
+section
+{
+	padding: 0 10px;
+}
+
+section h1
+{
+	color: darkgreen;
+	border-bottom:1px solid darkgreen;
+}
+
+aside
+{
+	background-color:#333;
+	border-radius: 4px;
+	margin: 20px 10px;
+	color: white;
+	padding:15px;
+}
+
+aside h3
+{
+	border-bottom: 1px dotted white;
+}
+
+aside input
+{
+	padding:7px 0px;
+	border-radius:4px;
+	border:0;
+	display:block;
+	margin: 10px 0;
+	width:100%;
+}
+aside input[type="submit"]
+{
+	background-color :darkgreen;
+	font-weight:bold;
+	text-transform:uppercase;
+	color:white;
+}
+
+/**
+*wide screen
+*/
+
+@media only screen and (min-width : 768px)
+{
+	main article 
+	{
+		width: 65%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	main aside
+	{
+		width: 30%;
+		display: inline-block;
+		margin:15px 0;
+	}
+}
+

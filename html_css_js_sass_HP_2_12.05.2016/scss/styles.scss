@@ -1,0 +1,56 @@
+// ----
+// Sass (v3.4.21)
+// Compass (v1.0.3)
+// ----
+.block{margin: 10px 5px;}
+p
+{
+  @extend .block;
+  border: 1px solid #eee;
+}
+ul
+{
+  @extend .block;
+  color: #333;
+  text-transform: uppercase;
+}
+@mixin bordered($width, $color)
+{
+  border: $width solid #ddd;
+
+  &:hover
+  {
+    border-color: $color;
+  }
+}
+h2
+{
+  @include bordered(5px, green);
+}
+$base-color:lightgrey;
+$top-color: lightgreen;
+$main-margin: 20px;
+$font:15px;
+
+section
+{
+  display:block;
+  article
+  {
+    width:300px; 
+    float:left; 
+    border:1px solid;
+    margin:$main-margin;
+    font-size:$font;
+      &.top-news
+      {
+          header
+          {
+            background:$top-color;
+          }
+        background:$base-color;
+        font-size:$font + 5;
+      }
+  }
+}
+

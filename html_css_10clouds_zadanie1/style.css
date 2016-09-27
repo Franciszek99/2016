@@ -1,0 +1,110 @@
+html
+{
+	height:100%;
+}
+body
+{
+	background-image: url(tlo.jpg);
+}
+#boks
+{
+
+	width: 300px;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+	border:1px #F9F9F9;
+	background: #fff linear-gradient(#F9F9F9, white) no-repeat;
+	
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	
+	
+	
+	box-shadow: 2px 2px 2px #888888;
+	
+}
+#obraz1
+{
+	width:90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+	margin-bottom: 10%;
+	
+}
+b
+{
+	color:#2159d6;
+	font-style: italic;
+}
+#tekst1
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom:10px;
+	color:#808080;
+	font-family: 'Droid Sans', sans-serif;
+	font-size:18px;
+	text-align: left;
+}
+#linia1
+{
+	height:1px;
+	width:250px;
+	margin-left:25px;
+	margin-right:25px;
+	background-color:grey;
+	opacity:0.1;
+}
+#tekst2
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom:10px;
+	margin-top:10px;
+	color:#808080;
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	text-align: left;
+	text-shadow: 0.5px 0.5px 0.5px #808080;
+	opacity:0.5;
+}
+#linia2
+{
+	height:1px;
+	background-color:grey;
+	opacity:0.25;
+	margin-bottom:10px;
+}
+#pole1
+{
+	border-radius:10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #b7b7b7;
+	font-family: 'Open Sans Condensed', sans-serif;
+
+	font-style: italic;
+	text-shadow: 0.5px 0.5px 0.5px #2C2C2C;
+	opacity:0.75;
+}
+#przycisk1
+{
+	float:left;
+	width:280px;
+	text-align:center;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom:10px;
+	margin-top:5px;
+	padding:10px;
+	border-radius:7px;
+	border-style:none;
+	font-family: 'Open Sans', sans-serif;
+	background:linear-gradient(#5e8ae9, #245cd7);
+	font-size:16px;
+	color:white;
+	font-weight: bold;
+}

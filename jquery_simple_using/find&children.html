@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+ <title>funkcje find$children</title> 
+</head>
+<body>
+  <h2>wyróżnianie jedynie wybranych elementów</h2>
+<ul id="ul-root">
+  <li>1</li>
+  <li>2</li>
+    <ul>
+      <li>2</li>
+      <li class="special">2.2</li>
+      <li>2.3</li>
+      <li>2.4</li>
+    </ul>
+    <li class="special">3</li>
+    <li>4</li>
+</ul>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('#ul-root').children('.special').css('font-weight', 'bold');
+      $('#ul-root').find('.special').css('background-color', 'red');//znajduje wszytskie special
+      
+     
+    });
+    
+  </script>
+</body>
+</html>

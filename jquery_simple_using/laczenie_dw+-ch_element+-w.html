@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+ <title>laczenie dwoch zbiorow</title> 
+</head>
+<body>
+  <div><h1>ten tekst bedzie normalny</h1></div>
+  <p>ten tekst powinien być wysiwetlony na niebiesko</p>
+  <span>ten tekst powinien być wysiwetlony na niebiesko</span>
+  <div><h1>ten tekst bedzie normalny</h1></div>
+  <p>ten tekst powinien być wyświetlony na niebiesko</p>
+  <span>ten tekst powinien być wyświetlony na niebiesko</span>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('p').add('span').css('background-color', 'blue');
+    });
+    
+  </script>
+</body>
+</html>

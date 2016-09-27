@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html ng-app="tutorialApp">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>AngularJS</title>
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/fontello.css" type="text/css" />
+<script src="./lib/angular.min.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/controllers/tutorialCtrl.js"></script>
+</head>
+<body ng-controller="TutorialCtrl">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#" style="color:#CC0033;"><img class="AngularJS-small" src="img/AngularJS-small.png"></a>
+          <h5 style="color:red;">directive, filters by {{tutorialObject.firstname + " " + tutorialObject.lastname}}</h5>
+    </nav>
+</br>
+</br>
+</br>
+<div class="jumbotron">
+      <div class="container">
+      	<div class="row">
+            <div class="col-sm-6">
+
+<h1><i class="icon-laptop"></i> Zmień moje imie i nazwisko</h1>
+<h5>{{tutorialObject.title}}</h5>
+
+<p>String: {{tutorialObject.firstname + " " + tutorialObject.lastname}}</p>
+
+<label>First Name</label>
+<input ng-model="tutorialObject.firstname | uppercase">
+</br>
+<label>Last Name</label>
+<input ng-model="tutorialObject.lastname | lowercase">
+</div>
+
+<div class="col-sm-6">
+	<h1><i class="icon-child"></i>Potęguj do woli!</h1>
+<p><b>Potęguj: {{tutorialObject.bindOutput | currency}}</b></p>
+<button ng-click="timesTwo()">Potęguj mnie!</button>
+
+<hr />
+
+<tb-welcome-message></tb-welcome-message>
+<span tb-welcome-message></span>
+<hr />
+
+<div>
+</div>
+</div>
+</body>
+</html>

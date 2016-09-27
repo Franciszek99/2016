@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+ <title>funkcje filter oraz end</title> 
+</head>
+<body>
+  <h2>Filtrowanie wybranych elementów</h2>
+<ul>
+  <li>jeden</li>
+  <li>dwa</li>
+  <li>trzy</li>
+  <li>cztery</li>
+  <li>pięć</li>
+  <li>szesc</li>
+  <li>siedem</li>
+  <li>osiem</li>
+</ul>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('li')
+      .filter(':odd').css('background-color','blue')//operowanie tylko na parzytstych
+      .end().css('color','red')
+    });
+    
+  </script>
+</body>
+</html>

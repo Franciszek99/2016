@@ -1,0 +1,94 @@
+@import "profile";
+
+
+$primary-color:green;
+$bg-color:#2c3e50;
+$hover-color:#16a085;
+$text-color:#ffffff;
+$buttonBackground: url(./tweed.png);
+$buttonBackground1: #9900CC;
+$buttonColor: #FFFFFF;
+$buttonPadding: 5px;
+
+body{
+    background-image: url(./bg.png);
+}
+
+
+
+h1{
+    color:$primary-color;
+}
+
+p{
+    font-size: 24px;
+    color:$primary-color;
+}
+
+nav{
+    ul{
+        background: $bg-color;
+        margin:0;
+        padding: 0;
+        list-style:none;
+    }
+    li{
+        display: inline-block;
+    }
+    a{
+        color:$text-color;
+        display:inline-block;
+        padding:10px 16px;
+        text-decoration : none;
+    }
+    
+    a:hover{
+        background:$hover-color;
+    }
+}
+
+.panel{
+    border:3px solid dodgerblue;
+    background:url(./bg-panel.png);
+    margin: 10px;
+}
+@mixin border-radius($radius){
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius;
+    -ms-border-radius:$radius;
+    border-radius:$radius;
+}
+.little-panel{
+    @include border-radius(21px);
+    @extend .panel;
+    
+    font-size: 12px;
+    padding:5px;
+}
+
+.big-panel{
+    @extend .panel;
+    @include border-radius(5px);
+    
+    font-size:32px;
+    padding:20px;
+}
+
+.button{
+    background-image: $buttonBackground;
+    border-radius: 8px;
+    color: $buttonColor;
+    display:inline-block;
+    padding: $buttonPadding;
+    text-decoration:none;
+    margin-left:5px;
+    margin-right:5px;
+}
+.jumbo-button{
+    @extend .button;
+    padding: $buttonPadding + 30px;
+
+}
+
+
+

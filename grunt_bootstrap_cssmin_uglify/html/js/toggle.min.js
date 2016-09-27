@@ -1,0 +1,1 @@
+function myFunction(a,b){return a*b}$("#menu-toggle").click(function(a){a.preventDefault(),$("#wrapper").toggleClass("menuDisplayed")});var x=myFunction(4,3);

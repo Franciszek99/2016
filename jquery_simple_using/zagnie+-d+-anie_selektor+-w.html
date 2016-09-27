@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+ <title>zagnieżdzanie selektorów</title> 
+</head>
+<body>
+  <div>ten tekst powinien mieć niebieskie <span>tło</span>.</div>
+  <div>Praesent sagittis sollicitudin vehicula. <em>Suspendisse suscipit pulvinar lacinia. </em> Aliquam rutrum, neque quis tincidunt iaculis, sapien sapien efficitur nunc, non commodo mi eros vitae magna. Sed molestie et nisl sed condimentum. In venenatis aliquam odio, sed suscipit felis placerat eu. <strong>Nulla suscipit hendrerit enim. Vivamus bibendum efficitur erat a consequat. </strong> Ut in sem eu enim hendrerit porttitor sit amet vitae felis. Nullam bibendum est ut venenatis tincidunt. Aenean viverra ligula vel congue convallis. Morbi suscipit lorem at dictum commodo.</div>
+  
+  <div>ten tekst powinien mieć niebieskie <span>tło</span>.</div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $(':not(:has(em))').css('background-color', 'blue');//em nie zawiera em a cały drugi akapit zaiwera em
+      
+     
+    });
+    
+  </script>
+</body>
+</html>

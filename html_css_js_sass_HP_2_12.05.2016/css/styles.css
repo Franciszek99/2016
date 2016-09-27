@@ -1,0 +1,38 @@
+.block, p, ul {
+  margin: 10px 5px;
+}
+
+p {
+  border: 1px solid #eee;
+}
+
+ul {
+  color: #333;
+  text-transform: uppercase;
+}
+
+h2 {
+  border: 5px solid #ddd;
+}
+h2:hover {
+  border-color: green;
+}
+
+section {
+  display: block;
+}
+section article {
+  width: 300px;
+  float: left;
+  border: 1px solid;
+  margin: 20px;
+  font-size: 15px;
+}
+section article.top-news {
+  background: lightgrey;
+  font-size: 20px;
+}
+section article.top-news header {
+  background: lightgreen;
+}
+
