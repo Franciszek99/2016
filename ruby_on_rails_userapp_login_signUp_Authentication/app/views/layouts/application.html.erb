@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails2</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <% if user_signed_in? %>
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete %></br>
+
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path %></br>
+    <%= link_to "Sign up", new_user_registration_path %></br>
+
+  <%end%>
+  
+      <%= link_to "Home", page_home_path %></br>
+      <%= link_to "About", page_about_path %></br>
+      <%= link_to "Contact", page_contact_path %></br>
+
+
+    
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>
