@@ -1,0 +1,40 @@
+/*
+Znajdź w bazie:
+1. Książki ułożone alfabetycznie wg tytułu
+2. Najdroższą książkę w bazie
+3. Wszystkie wysłane zamówienia
+4. Wszystkich klientów o nazwisku Rutkowski
+5. Książki zawierające wyrażenie "PHP" w tytule
+6. Zamówienia ułożone od ostatnio dokonanego
+
+Zapytania związane z łączeniem tabel:
+7. Wyjmij dla wszystkich zamówień: imię i nazwisko klienta zamawiającego, id zamówienia, datę zamówienia
+7a. Jak w punkcie 7, ale z aliasami (przezwiskami) dla tabel
+8. Imiona i nazwiska osób, które zamówiły kiedykolwiek książkę nr 2
+9. Jakie książki (tytuł, autor) zamówiła osoba: Jan Nowak?
+10. Zamówienia dokonane przez osoby o nazwisku Rutkowski ułożone wg daty od
+najpóźniej dokonanych (imię i nazwisko osoby zamawiającej, id, datę i status
+zamówienia, tytuł zamówionej książki)
+
+1 SELECT * FROM ksiazki ORDER BY tytul ASC
+
+2 SELECT * FROM ksiazki ORDER BY cena DESC LIMIT 1
+
+3 SELECT * FROM zamowienia WHERE status="wyslano"
+
+4 SELECT * FROM klienci WHERE nazwisko="rutkowski"
+
+5 SELECT * FROM ksiazki WHERE tytul LIKE "%PHP%"
+
+6 SELECT * FROM zamowienia ORDER BY data DESC
+
+7 SELECT klienci.imie, klienci.nazwisko, zamowienia.idzamowienia, zamowienia.data FROM klienci, zamowienia WHERE klienci.idklienta = zamowienia.idklienta
+
+7a SELECT k.imie, k.nazwisko, z.idzamowienia, z.data FROM klienci AS k, zamowienia AS z WHERE k.idklienta = z.idklienta
+
+8 SELECT k.imie, k.nazwisko FROM klienci AS k, zamowienia AS z WHERE z.idksiazki=2 AND z.idklienta = k.idklienta
+
+9 SELECT ksiazki.tytul, ksiazki.imieautora, ksiazki.nazwiskoautora FROM ksiazki, zamowienia WHERE zamowienia.idklienta=2 AND zamowienia.idksiazki = ksiazki.idksiazki
+*/
+
+SELECT klienci.imie, klienci.nazwisko, zamowienia.status, zamowienia.data, ksiazki.tytul FROm klienci, zamowienia, ksiazki WHERE klienci.nazwisko="Rutkowski" AND ksiazki.idksiazki = zamowienia.idksiazki AND klienci.idklienta = zamowienia.idklienta ORDER BY zamowienia.data DESC
